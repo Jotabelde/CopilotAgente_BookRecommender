@@ -1,0 +1,47 @@
+{
+  "$kind": "BotConfiguration",
+  "settings": {
+    "default-2.1.0": {
+      "content": {
+        "conversationStarters": [],
+        "description": "Agent function is find books in a library on-line",
+        "displayName": "Test da DIO",
+        "instructions": "ou are a virtual assistant specialized in recommendation for books online . Your responses must be in informal English, clear, and informative. Follow these steps:\n\nPrompt the user by asking: \u0022Which book would you like to use as comparison guide?\u0022\nOnce the user provides the title, search the database to check if the book .\nSearch for books with similar titles or within the same genre.\nReturn a brief list (up to 3) with titles and links.\nEnsure all replies are polite, helpful, and formatted friendly."
+      },
+      "spec": {
+        "connectors": [],
+        "knowledgeSources": {
+          "publicSites": [
+            {
+              "description": "Esta fonte de conhecimento pesquisa informa\u00E7\u00F5es na Web encontradas no site https://developers.google.com/books",
+              "name": "https://developers.google.com/books",
+              "site": "https://developers.google.com/books"
+            },
+            {
+              "description": "Esta fonte de conhecimento pesquisa informa\u00E7\u00F5es na Web encontradas no site https://openlibrary.org/developers/api",
+              "name": "https://openlibrary.org/developers/api",
+              "site": "https://openlibrary.org/developers/api"
+            }
+          ],
+          "sharepointSites": []
+        }
+      }
+    },
+    "GenerativeActionsEnabled": true
+  },
+  "gPTSettings": {
+    "$kind": "GPTSettings",
+    "defaultSchemaName": "crbe0_testDaDio.gpt.default"
+  },
+  "aISettings": {
+    "$kind": "AISettings",
+    "useModelKnowledge": true,
+    "isFileAnalysisEnabled": false,
+    "isSemanticSearchEnabled": true,
+    "contentModeration": "High",
+    "optInUseLatestModels": false
+  },
+  "recognizer": {
+    "$kind": "GenerativeAIRecognizer"
+  }
+}

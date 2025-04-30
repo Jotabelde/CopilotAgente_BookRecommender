@@ -1,0 +1,37 @@
+kind: AdaptiveDialog
+beginDialog:
+  kind: OnRecognizedIntent
+  id: main
+  intent:
+    displayName:
+    triggerQueries:
+      - find similar book
+      - recommend similar books
+      - books like this one
+      - suggest books like this
+      - similar book recommendations
+      - books that are similar
+      - find related books
+      - book alternatives
+
+  actions:
+    - kind: Question
+      id: Question_wm9M0P
+      variable: Topic.BookTitle
+      prompt: Please provide a book title for recommendations.
+      entity: StringPrebuiltEntity
+
+    - kind: SendActivity
+      id: SendActivity_cQvKGG
+      activity: Searching for books similar to {Topic.BookTitle}...
+
+    - kind: SendActivity
+      id: SendActivity_Jv34gt
+      activity: |-
+        Here are some recommended books based on your title:
+        1. [Book 1](https://www.googleapis.com/books/v1/volumes?q={Topic.BookTitle})
+        2. [Book 2](https://www.googleapis.com/books/v1/volumes?q={Topic.BookTitle})
+        3. [Book 3](https://www.googleapis.com/books/v1/volumes?q={Topic.BookTitle})
+
+inputType: {}
+outputType: {}

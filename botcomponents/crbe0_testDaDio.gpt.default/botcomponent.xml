@@ -1,0 +1,11 @@
+<botcomponent schemaname="crbe0_testDaDio.gpt.default">
+  <componenttype>15</componenttype>
+  <description>Agent function is find books in a library on-linea</description>
+  <iscustomizable>0</iscustomizable>
+  <name>Book Recommender</name>
+  <parentbotid>
+    <schemaname>crbe0_testDaDio</schemaname>
+  </parentbotid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</botcomponent>
